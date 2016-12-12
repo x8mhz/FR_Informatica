@@ -36,12 +36,12 @@
             this.btn_BuscarCliente = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btn_Limpar = new System.Windows.Forms.Button();
-            this.btn_Cadastrar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dgv_Cliente = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,12 +52,11 @@
             this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbFRInformaticaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bD_FRInformaticaDataSet = new FR_Informatica.BD_FRInformaticaDataSet();
-            this.dgv_Informacao = new System.Windows.Forms.DataGridView();
-            this.informaçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbFRInformacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bD_FRInformaticaDataSet1 = new FR_Informatica.BD_FRInformaticaDataSet1();
+            this.btn_Limpar = new System.Windows.Forms.Button();
+            this.btn_Cadastrar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -83,16 +82,14 @@
             this.btn_Calculadora = new System.Windows.Forms.Button();
             this.btn_Fechar = new System.Windows.Forms.Button();
             this.tb_FRInformaticaTableAdapter = new FR_Informatica.BD_FRInformaticaDataSetTableAdapters.tb_FRInformaticaTableAdapter();
-            this.tb_FRInformacaoTableAdapter = new FR_Informatica.BD_FRInformaticaDataSet1TableAdapters.tb_FRInformacaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Banner)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Cliente)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFRInformaticaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_FRInformaticaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Informacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFRInformacaoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_FRInformaticaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,7 +111,7 @@
             this.lbl_Logo.AutoSize = true;
             this.lbl_Logo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Logo.Font = new System.Drawing.Font("Cooper Std Black", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Logo.Location = new System.Drawing.Point(67, 18);
+            this.lbl_Logo.Location = new System.Drawing.Point(12, 9);
             this.lbl_Logo.Name = "lbl_Logo";
             this.lbl_Logo.Size = new System.Drawing.Size(378, 52);
             this.lbl_Logo.TabIndex = 2;
@@ -125,7 +122,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(764, 109);
+            this.textBox1.Location = new System.Drawing.Point(808, 95);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(301, 26);
@@ -138,12 +135,13 @@
             this.btn_BuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_BuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BuscarCliente.Location = new System.Drawing.Point(1029, 111);
+            this.btn_BuscarCliente.Location = new System.Drawing.Point(1073, 97);
             this.btn_BuscarCliente.Name = "btn_BuscarCliente";
             this.btn_BuscarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_BuscarCliente.Size = new System.Drawing.Size(36, 22);
             this.btn_BuscarCliente.TabIndex = 5;
             this.btn_BuscarCliente.UseVisualStyleBackColor = false;
+            this.btn_BuscarCliente.Click += new System.EventHandler(this.btn_BuscarCliente_Click);
             // 
             // tabControl1
             // 
@@ -153,22 +151,23 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-1, 111);
+            this.tabControl1.Location = new System.Drawing.Point(-1, 97);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(20, 10);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1124, 669);
+            this.tabControl1.Size = new System.Drawing.Size(1124, 695);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.statusStrip1);
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.btn_Limpar);
             this.tabPage1.Controls.Add(this.btn_Cadastrar);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.dgv_Cliente);
-            this.tabPage1.Controls.Add(this.dgv_Informacao);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.pictureBox3);
@@ -192,75 +191,58 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1116, 627);
+            this.tabPage1.Size = new System.Drawing.Size(1116, 653);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btn_Limpar
+            // statusStrip1
             // 
-            this.btn_Limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Limpar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.ForeColor = System.Drawing.Color.Green;
-            this.btn_Limpar.Location = new System.Drawing.Point(748, 20);
-            this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(124, 26);
-            this.btn_Limpar.TabIndex = 80;
-            this.btn_Limpar.Text = "Limpar";
-            this.btn_Limpar.UseVisualStyleBackColor = true;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBar1,
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(3, 628);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1110, 22);
+            this.statusStrip1.TabIndex = 83;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // btn_Cadastrar
+            // toolStripProgressBar1
             // 
-            this.btn_Cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Cadastrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.ForeColor = System.Drawing.Color.Green;
-            this.btn_Cadastrar.Location = new System.Drawing.Point(603, 20);
-            this.btn_Cadastrar.Name = "btn_Cadastrar";
-            this.btn_Cadastrar.Size = new System.Drawing.Size(124, 26);
-            this.btn_Cadastrar.TabIndex = 79;
-            this.btn_Cadastrar.Text = "Cadastrar";
-            this.btn_Cadastrar.UseVisualStyleBackColor = true;
-            this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // button2
+            // toolStripStatusLabel1
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(36, 63);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(38, 34);
-            this.button2.TabIndex = 78;
-            this.button2.UseVisualStyleBackColor = false;
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // dateTimePicker1
+            // toolStripStatusLabel2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(669, 223);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(298, 23);
-            this.dateTimePicker1.TabIndex = 77;
+            this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
-            // label11
+            // dataGridView2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Green;
-            this.label11.Location = new System.Drawing.Point(666, 207);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "Data";
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(9, 155);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(310, 154);
+            this.dataGridView2.TabIndex = 82;
             // 
-            // dgv_Cliente
+            // dataGridView1
             // 
-            this.dgv_Cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Cliente.AutoGenerateColumns = false;
-            this.dgv_Cliente.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgv_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
@@ -269,11 +251,11 @@
             this.defeitoDataGridViewTextBoxColumn,
             this.dataDataGridViewTextBoxColumn,
             this.valorDataGridViewTextBoxColumn});
-            this.dgv_Cliente.DataSource = this.tbFRInformaticaBindingSource;
-            this.dgv_Cliente.Location = new System.Drawing.Point(325, 315);
-            this.dgv_Cliente.Name = "dgv_Cliente";
-            this.dgv_Cliente.Size = new System.Drawing.Size(780, 312);
-            this.dgv_Cliente.TabIndex = 75;
+            this.dataGridView1.DataSource = this.tbFRInformaticaBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(325, 315);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(781, 312);
+            this.dataGridView1.TabIndex = 81;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -334,49 +316,72 @@
             this.bD_FRInformaticaDataSet.DataSetName = "BD_FRInformaticaDataSet";
             this.bD_FRInformaticaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dgv_Informacao
+            // btn_Limpar
             // 
-            this.dgv_Informacao.AutoGenerateColumns = false;
-            this.dgv_Informacao.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgv_Informacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Informacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Informacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.informaçãoDataGridViewTextBoxColumn,
-            this.dataDataGridViewTextBoxColumn1,
-            this.nomeDataGridViewTextBoxColumn1});
-            this.dgv_Informacao.DataSource = this.tbFRInformacaoBindingSource;
-            this.dgv_Informacao.Location = new System.Drawing.Point(9, 155);
-            this.dgv_Informacao.Name = "dgv_Informacao";
-            this.dgv_Informacao.Size = new System.Drawing.Size(310, 227);
-            this.dgv_Informacao.TabIndex = 74;
+            this.btn_Limpar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Limpar.FlatAppearance.BorderSize = 0;
+            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Limpar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.ForeColor = System.Drawing.Color.Green;
+            this.btn_Limpar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Limpar.Image")));
+            this.btn_Limpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Limpar.Location = new System.Drawing.Point(771, 16);
+            this.btn_Limpar.Name = "btn_Limpar";
+            this.btn_Limpar.Size = new System.Drawing.Size(101, 30);
+            this.btn_Limpar.TabIndex = 80;
+            this.btn_Limpar.Text = "Limpar";
+            this.btn_Limpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Limpar.UseVisualStyleBackColor = false;
+            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
-            // informaçãoDataGridViewTextBoxColumn
+            // btn_Cadastrar
             // 
-            this.informaçãoDataGridViewTextBoxColumn.DataPropertyName = "Informação";
-            this.informaçãoDataGridViewTextBoxColumn.HeaderText = "Informação";
-            this.informaçãoDataGridViewTextBoxColumn.Name = "informaçãoDataGridViewTextBoxColumn";
+            this.btn_Cadastrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cadastrar.FlatAppearance.BorderSize = 0;
+            this.btn_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cadastrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cadastrar.ForeColor = System.Drawing.Color.Green;
+            this.btn_Cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cadastrar.Image")));
+            this.btn_Cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cadastrar.Location = new System.Drawing.Point(599, 16);
+            this.btn_Cadastrar.Name = "btn_Cadastrar";
+            this.btn_Cadastrar.Size = new System.Drawing.Size(128, 30);
+            this.btn_Cadastrar.TabIndex = 79;
+            this.btn_Cadastrar.Text = "Cadastrar";
+            this.btn_Cadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Cadastrar.UseVisualStyleBackColor = false;
+            this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
             // 
-            // dataDataGridViewTextBoxColumn1
+            // button2
             // 
-            this.dataDataGridViewTextBoxColumn1.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn1.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn1.Name = "dataDataGridViewTextBoxColumn1";
+            this.button2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(36, 63);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 34);
+            this.button2.TabIndex = 78;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // nomeDataGridViewTextBoxColumn1
+            // dateTimePicker1
             // 
-            this.nomeDataGridViewTextBoxColumn1.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn1.Name = "nomeDataGridViewTextBoxColumn1";
+            this.dateTimePicker1.Location = new System.Drawing.Point(669, 223);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(298, 23);
+            this.dateTimePicker1.TabIndex = 77;
             // 
-            // tbFRInformacaoBindingSource
+            // label11
             // 
-            this.tbFRInformacaoBindingSource.DataMember = "tb_FRInformacao";
-            this.tbFRInformacaoBindingSource.DataSource = this.bD_FRInformaticaDataSet1;
-            // 
-            // bD_FRInformaticaDataSet1
-            // 
-            this.bD_FRInformaticaDataSet1.DataSetName = "BD_FRInformaticaDataSet1";
-            this.bD_FRInformaticaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Green;
+            this.label11.Location = new System.Drawing.Point(666, 207);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.TabIndex = 76;
+            this.label11.Text = "Data";
             // 
             // label9
             // 
@@ -563,7 +568,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Location = new System.Drawing.Point(0, 98);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1116, 347);
+            this.pictureBox2.Size = new System.Drawing.Size(1116, 555);
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
@@ -574,7 +579,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox1.Location = new System.Drawing.Point(325, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(780, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(781, 40);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -583,7 +588,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 38);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1116, 456);
+            this.tabPage2.Size = new System.Drawing.Size(1116, 653);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Relatório";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -593,7 +598,7 @@
             this.lbl_SubLogo.AutoSize = true;
             this.lbl_SubLogo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_SubLogo.Font = new System.Drawing.Font("Cooper Std Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SubLogo.Location = new System.Drawing.Point(252, 70);
+            this.lbl_SubLogo.Location = new System.Drawing.Point(197, 61);
             this.lbl_SubLogo.Name = "lbl_SubLogo";
             this.lbl_SubLogo.Size = new System.Drawing.Size(176, 19);
             this.lbl_SubLogo.TabIndex = 7;
@@ -605,7 +610,7 @@
             this.btn_Calculadora.FlatAppearance.BorderSize = 0;
             this.btn_Calculadora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Calculadora.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Calculadora.Location = new System.Drawing.Point(751, -3);
+            this.btn_Calculadora.Location = new System.Drawing.Point(526, -3);
             this.btn_Calculadora.Name = "btn_Calculadora";
             this.btn_Calculadora.Size = new System.Drawing.Size(124, 48);
             this.btn_Calculadora.TabIndex = 9;
@@ -618,7 +623,7 @@
             this.btn_Fechar.FlatAppearance.BorderSize = 0;
             this.btn_Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Fechar.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Fechar.Location = new System.Drawing.Point(954, -3);
+            this.btn_Fechar.Location = new System.Drawing.Point(998, -3);
             this.btn_Fechar.Name = "btn_Fechar";
             this.btn_Fechar.Size = new System.Drawing.Size(111, 48);
             this.btn_Fechar.TabIndex = 10;
@@ -630,15 +635,11 @@
             // 
             this.tb_FRInformaticaTableAdapter.ClearBeforeFill = true;
             // 
-            // tb_FRInformacaoTableAdapter
-            // 
-            this.tb_FRInformacaoTableAdapter.ClearBeforeFill = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 779);
+            this.ClientSize = new System.Drawing.Size(1121, 804);
             this.Controls.Add(this.btn_Fechar);
             this.Controls.Add(this.btn_Calculadora);
             this.Controls.Add(this.lbl_SubLogo);
@@ -648,7 +649,7 @@
             this.Controls.Add(this.lbl_Logo);
             this.Controls.Add(this.pic_Banner);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FR Informática";
@@ -657,12 +658,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Cliente)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFRInformaticaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_FRInformaticaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Informacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFRInformacaoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_FRInformaticaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -701,8 +702,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DataGridView dgv_Cliente;
-        private System.Windows.Forms.DataGridView dgv_Informacao;
         private System.Windows.Forms.Button btn_Calculadora;
         private System.Windows.Forms.Button btn_Fechar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -710,6 +709,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Limpar;
         private System.Windows.Forms.Button btn_Cadastrar;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private BD_FRInformaticaDataSet bD_FRInformaticaDataSet;
         private System.Windows.Forms.BindingSource tbFRInformaticaBindingSource;
         private BD_FRInformaticaDataSetTableAdapters.tb_FRInformaticaTableAdapter tb_FRInformaticaTableAdapter;
@@ -721,12 +722,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn defeitoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
-        private BD_FRInformaticaDataSet1 bD_FRInformaticaDataSet1;
-        private System.Windows.Forms.BindingSource tbFRInformacaoBindingSource;
-        private BD_FRInformaticaDataSet1TableAdapters.tb_FRInformacaoTableAdapter tb_FRInformacaoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn informaçãoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
 
